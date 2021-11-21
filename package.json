@@ -1,0 +1,49 @@
+{
+  "name": "todoreact",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/user-event": "^12.8.3",
+    "enzyme": "^3.11.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.20.2",
+    "react-redux": "^7.2.6",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint '**/*.js'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "eslint-config-salt": "^1.1.0",
+    "jest-environment-jsdom-sixteen": "^2.0.0"
+  }
+}

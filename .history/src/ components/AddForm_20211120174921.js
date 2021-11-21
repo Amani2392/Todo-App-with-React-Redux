@@ -1,0 +1,62 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../actions";
+
+const AddForm = () => {
+  const [titleState, setTitleState] = useState("");
+  const [descriptionState, setDescriptionState] = useState("");
+  const dispatch = useDispatch();
+  const addTitleHandler = (event) => {
+    if(!titleState){
+alert('eaf')
+    }   
+  setTitleState(event.target.value);
+  if(!descriptionState){
+    alert('sdf')
+  }
+  };
+  const addDescriptionHandler = (event) => {
+    setDescriptionState(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+   if(!titleState, !descriptionState) {
+     alert('add title and descriptions')
+   }
+    dispatch(addTodo({
+      Title: titleState,
+      Description: descriptionState,
+      done: false,
+      id: Math.random() * 1000,
+    }));
+    setTitleState("");
+    setDescriptionState("");
+  };
+
+  return (
+    <form className="form__container" onSubmit={submitHandler}>
+      <input
+        value={titleState}
+        onChange={addTitleHandler}
+        type="text"
+        className="form__title-input"
+        placeholder="Title"
+      />
+      <input
+        value={descriptionState}
+        onChange={addDescriptionHandler}
+        type="text"
+        className="form__desc-input"
+        placeholder="Description"
+      />
+      <input
+        type="submit"
+        value="Add task"
+        className="form__submit-btn"
+      ></input>
+    </form>
+  );
+};
+
+export default AddForm;

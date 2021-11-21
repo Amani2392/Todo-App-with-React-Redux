@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Zen Antique", serif;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+.App__header {
+  font-size: 2rem;
+  margin: 2rem;
+  color: #757575;
+}
+.form__container,
+.todo__container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__title-input,
+.form__desc-input {
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.form__submit-btn,
+.form__remove-btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0 12px;
+  line-height: 20px;
+  height: 30px;
+  max-height: 30px;
+  background: none;
+  font-weight: 700;
+  border: 0;
+  border-radius: 0;
+  color: #d92736;
+  transition-timing-function: ease-in-out;
+  transition-property: pink;
+  transition-duration: 150ms;
+  box-shadow: none;
+}
+.form__submit-btn {
+  font-size: 2rem;
+}
+.form__submit-btn:hover,
+.form__remove-btn:hover {
+  color: pink;
+  background-color: white;
+}
+
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.todo__output {
+  cursor: pointer;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  color: #504e4e;
+}
+
+.todo__item--done {
+  opacity: 0.8;
+  text-decoration: line-through;
+  order: 3;
+}
+
+@media (max-width: 700px) {
+  .form__submit-btn {
+    font-size: 1rem;
+  }
+  .form__remove-btn {
+    font-size: 0.7rem;
+  }
+  .todo__output {
+    font-size: 1rem;
+  }
+  .App__header {
+    font-size: 1rem;
+  }
+  .todo__container {
+    width: 50%;
+  }
+  .form__title-input,
+  .form__desc-input {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 528px) {
+  .form__remove-btn {
+    font-size: 0.5rem;
+  }
+  .todo__output {
+    font-size: 0.7rem;
+  }
+  .App__header {
+    margin-top: 1rem;
+    font-size: 0.5rem;
+  }
+  .form__submit-btn {
+    font-size: 0.5rem;
+  }
+  .form__title-input,
+  .form__desc-input {
+    font-size: 0.5rem;
+  }
+  .todo__container {
+    width: 100%;
+    padding: 27px 0;
+  }
+}
