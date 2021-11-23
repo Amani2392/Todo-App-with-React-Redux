@@ -23,14 +23,13 @@ const App = () => {
     storeInLocalStorage();
   }, [todoState]);
 
-  const savedTasksInLocalStorage = () => {
-    if (localStorage.getItem("tasks" === null)) {
-      localStorage.setItem("tasks", JSON.stringify([]));
-    }
+ const savedTasksInLocalStorage = () => {
     let FromLocalStorage = JSON.parse(localStorage.getItem("tasks"));
-    dispatch(setLocalStorage(FromLocalStorage));
+    if (localStorage.getItem("tasks")) {
+      dispatch(setLocalStorage(FromLocalStorage));
+    }
   };
-
+  
   return (
     <div className="App">
       <header className="App__header">
