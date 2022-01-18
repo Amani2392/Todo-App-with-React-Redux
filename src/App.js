@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App__header">
-        <h1>React Todo App</h1>
+        <h1>React-Redux Todo App</h1>
       </header>
       <AddForm />
       <Status />
